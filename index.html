@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>偏旁识字</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <!-- 首页 -->
+    <section class="screen screen--home" id="screen-home">
+      <h1 class="brand">偏旁识字</h1>
+      <p class="brand-sub">看偏旁 · 猜汉字</p>
+      <button class="start-btn" id="btn-start" type="button">开始游戏</button>
+      <p class="home-tip">点击开始 · 空格答题</p>
+    </section>
+
+    <!-- 游戏页 -->
+    <section class="screen screen--game" id="screen-game" hidden>
+      <header class="hud">
+        <span class="hud-count" id="hud-count">1 / 1</span>
+        <span class="hud-hint" id="hud-hint">按空格键 显示汉字</span>
+      </header>
+
+      <div class="stage" id="stage">
+        <div class="cards" id="cards"></div>
+        <div class="answer-slot">
+          <div class="answer" id="answer"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 结束页 -->
+    <section class="screen screen--over" id="screen-over" hidden>
+      <h2 class="game-over">游戏结束</h2>
+      <p class="over-sub" id="over-sub">本轮共 0 题</p>
+      <button class="start-btn start-btn--re" id="btn-restart" type="button">再玩一次</button>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
